@@ -57,9 +57,6 @@ function roots_display_sidebar() {
 		array(
 			'is_404',
 			'is_front_page',
-			array('is_singular', array('lilyoc_artwork')),
-			array('is_post_type_archive', array('lilyoc_artwork')),
-			array('is_tax', array('artwork-type')),
 		),
 		/**
 		 * Page template checks (via is_page_template())
