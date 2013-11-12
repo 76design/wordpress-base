@@ -8,15 +8,16 @@ Base deployment for WordPress, Composer and Phing using the WordPress Roots them
 * Bower (http://bower.io/)
 
 ## Installation
-Run composer create project.
 
-    $ composer create-project
+This repository has been registered with packagist. To get a base install of the project run the following command:  
+
+    $ composer create-project 76design/wordpress-base <folder_name>
 
 This will run composer install, installing any plugins (ex. akimset) or vendor packages and then the roots theme.  Then it runs any post create commands, which in this case will install WordPress.
 
 Once complete, run phing rename to rename your theme directory and project name where applicable.
 
-    $ phing rename
+    $ phing init-project
 
 Next step is to run a phing build.
 

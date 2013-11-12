@@ -1,5 +1,5 @@
 <project>
-    <target name="rename" description="Renames theme folders and other relevant strings">
+    <target name="init-project" description="Renames theme folders and other relevant strings">
         <!-- ask for the wordpress theme name -->
         <input propertyname="theme.folder.name" defaultvalue="wp-base-theme">Enter your theme folder name</input>
 

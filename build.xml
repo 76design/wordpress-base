@@ -21,7 +21,7 @@
     <import file="${build.task.dir}/compass.xml" optional="true" />
     <import file="${build.task.dir}/composer.xml" optional="true" />
     <import file="${build.task.dir}/bower.xml" optional="true" />
-    <import file="${build.task.dir}/rename.xml" optional="true" />
+    <import file="${build.task.dir}/init-project.xml" optional="true" />
 
     <target name="clean">
         <phingcall target="composer-clean" />
