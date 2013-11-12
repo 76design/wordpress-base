@@ -1,0 +1,34 @@
+// Theme
+$font-size-base: 14px; // This will overwrite bootstrap font size as well.
+
+@function em($px, $base: $font-size-base) {
+  @return ($px / $base) * 1em;
+}
+
+$appFontSizeM1: em(12px);
+$appFontSizeP0: 1.0em;
+$appFontSizeP1: em(16px);
+$appFontSizeP2: em(18px);
+$appFontSizeP3: em(24px);
+$appFontSizeP4: em(36px);
+
+// Colors
+$white: #FFF;
+$black: #000;
+$blue: #0087d3;
+$darkBlue: #112b3f;
+
+// Definitions
+$textColor: $black;
+$backgroundColor: $white;
+$linkColor: $blue;
+$linkHoverColor: $darkBlue;
+
+// Font
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$baseFontFamily:        $sansFontFamily !default;
+
+// Bootstrap Overrides
+// Example
+// $text-color: $text-color-default;
+// $text-muted: $text-color-light;

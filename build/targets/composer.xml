@@ -1,0 +1,9 @@
+<project>
+    <target name="composer-install" description="Installs the latest composer PHP packages defined by composer.json and composer.lock">
+        <exec command="composer install --prefer-dist --optimize-autoloader" passthru="${build.verbose}" checkreturn="true" />
+    </target>
+
+    <target name="composer-clean" description="Cleans composer vendor directory">
+        <delete dir="${project.basedir}/vendor" includeemptydirs="true" verbose="${build.verbose}" failonerror="true" />
+    </target>
+</project>

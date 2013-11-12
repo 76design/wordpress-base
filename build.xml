@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="@@THEME_NAME@@" default="build" basedir="." phingVersion="2.4.2">
+    <property file="build/build.properties" />
+    <property name="env" value="${deploy.default-environment}" />
+    <property name="environment" value="${env}" />
+
+    <tstamp>
+        <format property="date" pattern="%Y%m%d" />
+        <format property="datetime" pattern="%Y%m%d-%H%M" />
+    </tstamp>
+    <property name="build.verbose" value="true" />
+    <property name="build.dir" value="${project.basedir}/build" />
+    <property name="build.task.dir" value="${build.dir}/targets" />
+    <property name="build.environment.dir" value="${build.dir}/env" />
+    <property name="build.theme.dir" value="wp-content/themes/${wp.theme.dir}" />
+
+
+    <!-- list of tasks included -->
+    <import file="${build.task.dir}/config.xml" optional="true" />
+    <import file="${build.task.dir}/deploy.xml" optional="true" />
+    <import file="${build.task.dir}/compass.xml" optional="true" />
+    <import file="${build.task.dir}/composer.xml" optional="true" />
+    <import file="${build.task.dir}/bower.xml" optional="true" />
+    <import file="${build.task.dir}/rename.xml" optional="true" />
+
+    <target name="clean">
+        <phingcall target="composer-clean" />
+        <phingcall target="bower-clean" />
+    </target>
+    <target name="build">
+        <phingcall target="composer-install" />
+        <phingcall target="bower-install" />
+        <phingcall target="compass-compile" />
+    </target>
+</project>

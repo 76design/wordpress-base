@@ -1,0 +1,7 @@
+{
+  "name": "76design Wordpress Base",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap-sass": "3.0.0"
+  }
+}

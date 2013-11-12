@@ -1,0 +1,12 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+guard 'livereload' do
+  watch(%r{.+\.php$})
+  watch(%r{assets/.+\.(css|js|html)})
+end
+
+
+guard 'compass' do
+  watch(%r{^source/scss/.+\.s[ac]ss})
+end

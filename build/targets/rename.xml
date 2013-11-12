@@ -1,0 +1,42 @@
+<project>
+    <target name="rename">
+        <!-- ask for the wordpress theme name -->
+        <input propertyname="theme.folder.name" defaultvalue="wp-base-theme">Enter your theme folder name</input>
+
+        <!-- rename theme directory -->
+        <copy todir="${project.basedir}/wp-content/themes/${theme.folder.name}">
+            <fileset dir="${project.basedir}/wp-content/themes/wp_base" />
+        </copy>
+        <delete dir="${project.basedir}/wp-content/themes/wp_base" />
+
+        <!-- rename tokens in code -->
+        <reflexive>
+            <fileset dir="${project.basedir}">
+                <include pattern="**/*.xml"/>
+                <include pattern="**/*.properties"/>
+                <include pattern="**/*.php"/>
+            </fileset>
+            <filterchain>
+                <replacetokens begintoken="@@" endtoken="@@">
+                    <token key="THEME_FOLDER_NAME" value="${theme.folder.name}"/>
+                </replacetokens>
+            </filterchain>
+        </reflexive>
+
+        <!-- ask for the wordpress theme name -->
+        <input propertyname="theme.name" defaultvalue="WP Base">Enter your theme name</input>
+
+        <!-- rename tokens in code -->
+        <reflexive>
+            <fileset dir="${project.basedir}">
+                <include pattern="**/*.css"/>
+                <include pattern="**/*.xml"/>
+            </fileset>
+            <filterchain>
+                <replacetokens begintoken="@@" endtoken="@@">
+                    <token key="THEME_NAME" value="${theme.name}"/>
+                </replacetokens>
+            </filterchain>
+        </reflexive>
+    </target>
+</project>

@@ -1,0 +1,2 @@
+<?php
+define ("MODE", "@MODE@");

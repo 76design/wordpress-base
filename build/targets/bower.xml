@@ -1,0 +1,10 @@
+<project>
+    <target name="bower-install" depends="bower-installer-clean" description="Installs bower frontend dependencies">
+        <exec command="bower install" dir="${project.basedir}/${build.theme.dir}" passthru="${build.verbose}" checkreturn="true" />
+    </target>
+
+    <target name="bower-clean" description="Cleans bower files.">
+        <php expression="json_decode(file_get_contents('${project.basedir}/${build.theme.dir}/.bowerrc'))->directory ?: 'bower_components';" returnProperty="bower_dir"  />
+        <delete dir="${project.basedir}/${build.theme.dir}/${bower_dir}" includeemptydirs="true" verbose="${build.verbose}" failonerror="true" />
+    </target>
+</project>

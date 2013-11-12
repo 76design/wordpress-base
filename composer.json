@@ -1,0 +1,44 @@
+{
+  "name": "76design/wp_base_roots",
+  "description": "76design Base Wordpress install with Roots theme",
+  "authors": [
+    {
+      "name": "76 Design",
+      "email": "support@76design.com"
+    }
+  ],
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": [
+        {
+          "name": "themes/roots",
+          "type": "wordpress-theme",
+          "version": "1.0",
+          "dist": {
+            "url": "https://github.com/retlehs/roots/archive/96be48c07407638ba52bdd6a33892c4121d67e1e.zip",
+            "type": "zip"
+          },
+          "require": {
+            "composer/installers": "*"
+          }
+        }
+      ]
+    }
+  ],
+  "require": {
+    "wpackagist/akismet": "*",
+    "themes/roots": "*"
+  },
+
+  "scripts": {
+    "post-create-project-cmd": [
+      "svn export --force --ignore-externals http://core.svn.wordpress.org/tags/3.7.1/ ."
+    ]
+  },
+  "minimum-stability": "dev"
+}

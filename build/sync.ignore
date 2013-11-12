@@ -1,0 +1,9 @@
+.svn
+.svn/*
+.bower-components
+.idea
+.sass-cache
+thumbs.db
+build
+working
+working/**

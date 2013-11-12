@@ -1,0 +1,11 @@
+<project>
+    <target name="compass-compile" depends="compass-clean" description="compile all sass files for production">
+        <exec command="compass compile -e production --force" dir="${project.basedir}/${build.theme.dir}" passthru="${build.verbose}" checkreturn="true" />
+    </target>
+    <target name="compass-watch" depends="compass-clean" description="watch sass directories for changes and compile files on change">
+        <exec command="compass watch -e development" dir="${project.basedir}/${build.theme.dir}" passthru="${build.verbose}" checkreturn="true"  />
+    </target>
+    <target name="compass-clean" description="cleanup compass files">
+        <exec command="compass clean" dir="${project.basedir}/${build.theme.dir}" passthru="${build.verbose}" />
+    </target>
+</project>
