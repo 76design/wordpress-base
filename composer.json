@@ -1,10 +1,14 @@
 {
-  "name": "76design/wp_base_roots",
-  "description": "76design Base Wordpress install with Roots theme",
+  "name": "wordpress-base",
+  "description": "Base Wordpress install with Roots theme",
   "authors": [
     {
-      "name": "76 Design",
-      "email": "support@76design.com"
+      "name": "Nick Edgar",
+      "email": "edgar@76design.com"
+    },
+    {
+      "name": "Terry Appleby",
+      "email": "appleby@76design.com"
     }
   ],
   "repositories":[
