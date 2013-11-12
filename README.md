@@ -1,3 +1,6 @@
+# wordpress-base
+
+Base deployment for WordPress, Composer and Phing using the WordPress Roots theme.
 
 ## Dependencies
 * Composer (http://getcomposer.org/)
