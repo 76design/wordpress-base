@@ -4,29 +4,29 @@ require_once('mode.php');
 
 $config = array(
 	'production' => array(
-		'DB_76HOST' => 'localhost',
-		'DB_76USER' => '',
-		'DB_76PASS' => '',
-		'DB_76NAME' => '',
-		'DB_76CHAR' => 'utf8',
+    /** MySQL hostname */
+		'DB_HOST' => 'localhost',
+    /** MySQL database username */
+		'DB_USER' => '',
+    /** MySQL database password */
+		'DB_PASSWORD' => '',
+    /** The name of the database for WordPress */
+		'DB_NAME' => '',
+    /** Database Charset to use in creating database tables. */
+		'DB_CHARSET' => 'utf8',
+    /** The Database Collate type. Don't change this if in doubt. */
+    'DB_COLLATE' => '',
 		'GOOGLE_ANALYTICS_ID' => '',
 		'DEBUG'     => false // unused for now...
 	)
 );
 
 $config['development'] = array_merge($config['production'], array(
-		'DB_76HOST' => 'localhost',
-		'DB_76USER' => '',
-		'DB_76PASS' => '',
-		'DB_76NAME' => '',
-		'JETPACK_DEV_DEBUG' => true
-	)
-);
-
-$config['appleby'] = array_merge($config['development'], array(
-		'DB_76NAME' => 'lilyoc',
-		'DB_76USER' => 'root',
-		'DB_76PASS' => ''
+		'DB_HOST' => 'localhost',
+		'DB_USER' => '',
+		'DB_PASSWORD' => '',
+		'DB_NAME' => '',
+//		'JETPACK_DEV_DEBUG' => true
 	)
 );
 
