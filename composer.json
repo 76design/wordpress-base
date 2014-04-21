@@ -42,7 +42,7 @@
 
   "scripts": {
     "post-create-project-cmd": [
-      "svn export --force --ignore-externals http://core.svn.wordpress.org/tags/3.7.1/ ."
+      "svn export --force --ignore-externals http://core.svn.wordpress.org/tags/3.9/ ."
     ]
   },
   "minimum-stability": "dev"
