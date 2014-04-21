@@ -7,3 +7,13 @@ thumbs.db
 build
 working
 working/**
+uploads
+uploads/**
+build.xml
+*.sublime-*
+.idea
+*.iml
+stats
+stats/**
+.htaccess
+includes/mode.php
