@@ -10,6 +10,10 @@
     {
       "name": "Terry Appleby",
       "email": "appleby@76design.com"
+    },
+    {
+      "name": "Scott Burlington",
+      "email": "burlington@76design.com"
     }
   ],
   "repositories":[
@@ -42,7 +46,7 @@
 
   "scripts": {
     "post-create-project-cmd": [
-      "svn export --force --ignore-externals http://core.svn.wordpress.org/tags/3.9/ ."
+      "svn export --force --ignore-externals http://core.svn.wordpress.org/tags/4.0.1/ ."
     ]
   },
   "minimum-stability": "dev"
